@@ -12,6 +12,7 @@ connectDb()
 
 //route file
 import bootcamps from './routes/bootcamp.js'
+import courses from './routes/courses.js'
 
 //express app
 const app = express()
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1/bootcamps', bootcamps)
+app.use('/api/v1/courses', courses)
 
 app.use(errorHandler)
 
